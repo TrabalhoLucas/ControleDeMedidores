@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.lucas.appcontrolemedidores.R;
+import devandroid.lucas.appcontrolemedidores.database.ControleMedidorDB;
 import devandroid.lucas.appcontrolemedidores.database.ListaVipDB;
 
 public class SplashActivity extends AppCompatActivity {
@@ -39,6 +40,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                ControleMedidorDB db = new ControleMedidorDB(SplashActivity.this);
 
                 Intent telaPrincipal = new Intent(SplashActivity.this, ControleMedidorActivity.class);
                 startActivity(telaPrincipal);

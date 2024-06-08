@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnFinalizar.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this,"Volte sempre!",Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Volte sempre!", Toast.LENGTH_LONG).show();
             finish();
         });
 
