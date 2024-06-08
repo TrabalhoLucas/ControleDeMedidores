@@ -10,8 +10,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import devandroid.lucas.appcontrolemedidores.R;
+import devandroid.lucas.appcontrolemedidores.controller.MedidorController;
+import devandroid.lucas.appcontrolemedidores.model.Medidor;
 
 public class ControleMedidorActivity extends AppCompatActivity {
+
+    MedidorController controller;
+
+    Medidor medidor;
 
     EditText editNumeroMedidor;
     EditText editNumeroDaNota;
@@ -29,6 +35,10 @@ public class ControleMedidorActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_controlemedidores);
 
+        controller = new MedidorController(ControleMedidorActivity.this);
+
+        medidor = new Medidor();
+
         editNumeroMedidor = findViewById(R.id.editNumeroMedidor);
         editNumeroDaNota = findViewById(R.id.editNumeroDaNota);
         editEndereco = findViewById(R.id.editEndereco);
@@ -37,11 +47,18 @@ public class ControleMedidorActivity extends AppCompatActivity {
         btnLimpar = findViewById(R.id.btnLimpar);
         btnFinalizar = findViewById(R.id.btnFinalizar);
 
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnSalvar.setOnClickListener(v -> {
 
-            }
+            medidor.setNumeroMedidor(editNumeroMedidor.getText().toString());
+            medidor.setNumeroDaNota(editNumeroDaNota.getText().toString());
+            medidor.setEndereco(editEndereco.getText().toString());
+
+            Toast.makeText(ControleMedidorActivity.this,"Salvo com sucesso!",Toast.LENGTH_LONG).show();
+
+
+            controller.salvar(medidor);
+
+
         });
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
