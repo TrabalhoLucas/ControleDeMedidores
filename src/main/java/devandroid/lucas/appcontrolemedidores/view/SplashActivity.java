@@ -12,7 +12,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.lucas.appcontrolemedidores.R;
 import devandroid.lucas.appcontrolemedidores.database.ControleMedidorDB;
-import devandroid.lucas.appcontrolemedidores.database.ListaVipDB;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -24,7 +23,6 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
 
-        ListaVipDB db = new ListaVipDB(SplashActivity.this);
 
         comutarTelaSplash();
 
