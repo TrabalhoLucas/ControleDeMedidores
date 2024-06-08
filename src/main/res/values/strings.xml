@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppControleMedidores</string>
+    <string name="txt_titulo">Controle de Medidores</string>
+    <string name="txt_hint_edit_numero_medidor">Numero do medidor</string>
+    <string name="txt_hint_edit_numero_da_nota">Numero da nota</string>
+    <string name="txt_hint_edit_endereco">Endereço</string>
+    <string name="txt_hint_edit_telefone_contato">Telefone de Contato</string>
+    <string name="txt_button_limpar">LIMPAR</string>
+    <string name="txt_button_salvar">SALVAR</string>
+    <string name="txt_button_finalizar">FINALIZAR</string>
+    <string name="txt_selecione_um_curso">Selecione um Curso</string>
+</resources>
